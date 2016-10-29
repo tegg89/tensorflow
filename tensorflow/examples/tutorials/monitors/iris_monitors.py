@@ -55,8 +55,7 @@ classifier = tf.contrib.learn.DNNClassifier(hidden_units=[10, 20, 10],
 # Fit model.
 classifier.fit(x=training_set.data,
                y=training_set.target,
-               steps=2000,
-               monitors=[validation_monitor])
+               steps=2000)
 
 # Evaluate accuracy.
 accuracy_score = classifier.evaluate(x=test_set.data,
